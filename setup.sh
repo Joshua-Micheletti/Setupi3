@@ -2,11 +2,16 @@
 
 config=$HOME/.config/
 
+sudo add-apt-repository ppa:regolith-linux/release
+sudo apt update
+
 sudo apt install i3-gaps -y
 sudo apt install compton -y
-sudo apt install polybar -y
 sudo apt install feh -y
 sudo apt install zsh -y
+sudo apt install ranger -y
+sudo apt install rofi -y
+
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -30,7 +35,6 @@ sudo mv $HOME/.zshrc $HOME/.zshrc.old
 sudo mv $HOME/.p10k.zsh $HOME/.p10k.zsh.old
 sudo mv $HOME/.local/share/xfce4 $HOME/.local/share/xfce4.old
 
-
 sudo cp -r .config/i3 $config
 sudo cp -r .config/i3status $config
 sudo cp -r .config/compton.conf $config
@@ -38,3 +42,10 @@ sudo cp -r .config/polybar $config
 sudo cp -r .zshrc $HOME
 sudo cp -r .p10k.zsh $HOME
 sudo cp -r .local/share/xfce4 $HOME/.local/share
+
+
+echo "----------- setup nerdfonts -----------"
+
+mkdir $HOME/.fonts
+cp ./.fonts/* $HOME/.fonts
+fc-cache -fv
