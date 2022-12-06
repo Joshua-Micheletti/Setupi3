@@ -12,7 +12,6 @@ sudo apt install zsh -y
 sudo apt install ranger -y
 sudo apt install rofi -y
 
-
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
@@ -42,6 +41,10 @@ sudo cp -r .config/polybar $config
 sudo cp -r .zshrc $HOME
 sudo cp -r .p10k.zsh $HOME
 sudo cp -r .local/share/xfce4 $HOME/.local/share
+
+mkdir $HOME/.local/share/rofi
+mkdir $HOME/.local/share/rofi/themes
+sudo cp -r .local/share/rofi/themes/* $HOME/.local/share/rofi/themes/
 
 
 echo "----------- setup nerdfonts -----------"
