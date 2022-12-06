@@ -46,6 +46,8 @@ mkdir $HOME/.local/share/rofi
 mkdir $HOME/.local/share/rofi/themes
 sudo cp -r .local/share/rofi/themes/* $HOME/.local/share/rofi/themes/
 
+sudo cp -r Pictures/wallpaper.png $HOME/Pictures/
+
 
 echo "----------- setup nerdfonts -----------"
 
